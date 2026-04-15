@@ -1,0 +1,16 @@
+@echo off
+echo =========================================
+echo A iniciar a Bricoloja...
+echo =========================================
+echo.
+echo 1. A iniciar o Servidor Backend...
+start cmd /k "cd backend && node index.js"
+echo.
+echo 2. A iniciar o Frontend (React)...
+start cmd /k "cd frontend && npm run dev"
+echo.
+echo A aguardar que os servidores arranquem...
+timeout /t 4 /nobreak > nul
+echo.
+echo 3. A abrir o site no browser...
+start http://localhost:5173
